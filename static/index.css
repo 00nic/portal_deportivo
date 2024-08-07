@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    font-family: "Josefin Sans";
+    background-color: #07ff;
+    background: radial-gradient(rgba(202, 204, 207, 0.667), rgba(217, 221, 225, 0.867));
+    height: 100vh;
+}
+.title{
+    margin: 0;
+    text-align: center;
+    background-color: #07fd;
+    box-shadow: 0 0 30px #0005;
+    padding: 10px;
+}
+.box{
+    width: 100%;
+}
+h3{
+    font-size: 26px;
+    text-align: center;
+}
+.box-group{
+    margin:20px;
+    width: 900px;
+    margin: auto;
+    font-size: 20px;
+    padding: 10px
+}
+
+/* FIXTURE */
+span{
+    border: 2px solid #000;
+    background-color: #000;
+    width: 100%;
+}
+.fixture--title{
+    border-top:2px solid#000;
+    padding: 10px
+
+}
