@@ -4,6 +4,7 @@ body{
     background-color: #07ff;
     background: radial-gradient(rgba(202, 204, 207, 0.667), rgba(217, 221, 225, 0.867));
     height: 100vh;
+
 }
 .title{
     margin: 0;
@@ -38,3 +39,35 @@ span{
     padding: 10px
 
 }
+.conteiner{
+    position: relative;
+    border: 2px solid #000;
+    margin: auto;
+    width: 1366px; 
+    height: 600px;
+    margin-bottom: 10px;
+}
+.circle{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+
+/* Posiciones de cada circulo */
+.circle1{ top: 40px; left:60px}
+.circle2{ top: 160px; left:60px}
+.circle3{ bottom: 160px; left:60px}
+.circle4{ bottom: 40px; left:60px}
+.circle5{ top: 150px; left:100px}
+.circle6{ top: 150px; left:100px}
+.circle7{ top: 150px; left:100px}
+.circle8{ top: 150px; left:100px}
+.circle9{ top: 150px; left:100px}
+.circle10{ top: 150px; left:100px}
+.circle11{ top: 150px; left:100px}
+.circle12{ top: 150px; left:100px}
+.circle13{ top: 150px; left:100px}
+.circle14{ top: 150px; left:100px}
