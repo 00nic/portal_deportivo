@@ -1,8 +1,10 @@
 body{
     margin: 0;
     font-family: "Josefin Sans";
-    background-color: #07ff;
-    /* background: radial-gradient(rgba(202, 204, 207, 0.667), rgba(217, 221, 225, 0.867)); */
+    background-color: #202124;
+    color: #e8eaed;
+    /* background: radial-gradient(#0077ff, #0d2237dd); */
+    /* background: linear-gradient(#f00, #0f0); */
     height: 100vh;
 
 }
@@ -42,19 +44,23 @@ span{
 }
 .conteiner{
     position: relative;
-    border: 2px solid #000;
+    border: 4px solid #000;
+    border-radius: 10px;
     margin: auto;
     width: 1366px;
     height: 600px;
     margin-bottom: 10px;
     background-size: contain;
+    box-shadow: 0 0 35px #476ea8;
 }
-.title--game{ margin: 0; margin-bottom: 0px;}
+.title--game{ margin: 0; 
+    margin-bottom: 0px; 
+    font-size: 19px;}
 
 .conteiner--game{
     position: absolute;
-    width: 100px;
-    height: 230px;
+    width: 105px;
+    height: 260px;
     transition: transform 0.3s;
     text-align: center;
     box-sizing: border-box;
@@ -69,13 +75,12 @@ span{
 .game5{bottom: 40px; right: 60px;}
 .game3{top: 120px; left: 300px; height: 400px;}
 .game6{top: 120px; right: 300px; height: 400px;}
-
-
+.game7{ top:250px; left:533px; width: 300px}
 
 .circle{
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     overflow: hidden;
     transition: transform 0.3s; 
@@ -93,3 +98,5 @@ span{
 .circle2, .circle4, .circle8, .circle10{ bottom: 0}
 .circle5, .circle11{top:12px; margin-bottom: 5px; margin-top: 5px}
 .circle6, .circle12{bottom: 12px;}
+.circle13{left: 0;}
+.circle14{ right: 0;}
