@@ -2,7 +2,7 @@ body{
     margin: 0;
     font-family: "Josefin Sans";
     background-color: #07ff;
-    background: radial-gradient(rgba(202, 204, 207, 0.667), rgba(217, 221, 225, 0.867));
+    /* background: radial-gradient(rgba(202, 204, 207, 0.667), rgba(217, 221, 225, 0.867)); */
     height: 100vh;
 
 }
@@ -20,6 +20,7 @@ h3{
     font-size: 26px;
     text-align: center;
 }
+
 .box-group{
     margin:20px;
     width: 900px;
@@ -43,37 +44,40 @@ span{
     position: relative;
     border: 2px solid #000;
     margin: auto;
-    width: 1366px; 
+    width: 1366px;
     height: 600px;
     margin-bottom: 10px;
+    background-size: contain;
 }
+.title--game{ margin: 0; margin-bottom: 0px;}
+
+.conteiner--game{
+    position: absolute;
+    width: 100px;
+    height: 230px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+.conteiner--game:hover{
+    transform: scale(1.2);
+}
+/* POSICION DE PARTIDOS */
+.game1{top:40px; left: 60px;}
+.game2{bottom: 40px; left: 60px;}
+
 .circle{
     position: absolute;
     width: 100px;
     height: 100px;
-    background-color: #000;
     border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s;  
 }
-
-
-/* Posiciones de cada circulo */
-/* CUARTOS DE FINAL LADO IZQUIERDO */
-.circle1{ top: 40px; left:60px}
-.circle2{ top: 160px; left:60px}
-.circle3{ bottom: 160px; left:60px}
-.circle4{ bottom: 40px; left:60px}
-/* SEMIFINAL LADO IZQUIERDO */
-.circle5{ top: 100px; left:300px}
-.circle6{ bottom:100px; left:300px}
-
-/* CUARTOS DE FINAL LADO DERECHO */
-.circle7{ top: 40px; right:60px;}
-.circle8{ top: 160px; right:60px}
-.circle9{ bottom: 160px; right:60px}
-.circle10{ bottom: 40px; right:60px}
-/* SEMIFINAL LADO DERECHO */
-.circle11{ top: 100px; right:300px}
-.circle12{ bottom: 100px; right:300px}
-/* FINAL */
-.circle13{ top: 250px; left:500px}
-.circle14{ top: 250px; right:500px}
+.circle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* POSICION DE CIRCULOS */
+.circle1, .circle3{ top: 1; margin-bottom: 5px; }
+.circle2, .circle4{ bottom: 0}
