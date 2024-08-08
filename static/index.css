@@ -66,7 +66,10 @@ span{
 .game1{top:40px; left: 60px;}
 .game2{bottom: 40px; left: 60px;}
 .game4{top:40px; right: 60px;}
-.game5{bottom: 40px; left: 160px;}
+.game5{bottom: 40px; right: 60px;}
+.game3{top: 120px; left: 300px; height: 400px;}
+.game6{top: 120px; right: 300px; height: 400px;}
+
 
 
 .circle{
@@ -88,4 +91,5 @@ span{
 /* POSICION DE CIRCULOS */
 .circle1, .circle3, .circle7, .circle9{ top: 1; margin-bottom: 5px; }
 .circle2, .circle4, .circle8, .circle10{ bottom: 0}
-
+.circle5, .circle11{top:12px; margin-bottom: 5px; margin-top: 5px}
+.circle6, .circle12{bottom: 12px;}
