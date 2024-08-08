@@ -57,17 +57,23 @@ span{
 
 
 /* Posiciones de cada circulo */
+/* CUARTOS DE FINAL LADO IZQUIERDO */
 .circle1{ top: 40px; left:60px}
 .circle2{ top: 160px; left:60px}
 .circle3{ bottom: 160px; left:60px}
 .circle4{ bottom: 40px; left:60px}
-.circle5{ top: 150px; left:100px}
-.circle6{ top: 150px; left:100px}
-.circle7{ top: 150px; left:100px}
-.circle8{ top: 150px; left:100px}
-.circle9{ top: 150px; left:100px}
-.circle10{ top: 150px; left:100px}
-.circle11{ top: 150px; left:100px}
-.circle12{ top: 150px; left:100px}
-.circle13{ top: 150px; left:100px}
-.circle14{ top: 150px; left:100px}
+/* SEMIFINAL LADO IZQUIERDO */
+.circle5{ top: 100px; left:300px}
+.circle6{ bottom:100px; left:300px}
+
+/* CUARTOS DE FINAL LADO DERECHO */
+.circle7{ top: 40px; right:60px;}
+.circle8{ top: 160px; right:60px}
+.circle9{ bottom: 160px; right:60px}
+.circle10{ bottom: 40px; right:60px}
+/* SEMIFINAL LADO DERECHO */
+.circle11{ top: 100px; right:300px}
+.circle12{ bottom: 100px; right:300px}
+/* FINAL */
+.circle13{ top: 250px; left:500px}
+.circle14{ top: 250px; right:500px}
