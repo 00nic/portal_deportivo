@@ -126,6 +126,37 @@ h3{
     left: 170px;
     margin-left: -80px;
 }
+.game2 .tooltip--text{
+    bottom: 100px;
+    left: 170px;
+    margin-left: -80px;
+}
+.game3 .tooltip--text{
+    bottom: 200px;
+    left: 170px;
+    margin-left: -80px;
+}
+/* FALTA MODIFICAR */
+.game4 .tooltip--text{
+    bottom: 200px;
+    left: 170px;
+    margin-left: -80px;
+}
+.game5 .tooltip--text{
+    bottom: 200px;
+    left: 170px;
+    margin-left: -80px;
+}.game6 .tooltip--text{
+    bottom: 200px;
+    left: 170px;
+    margin-left: -80px;
+}
+/* FINAL  */
+.game7 .tooltip--text{
+    bottom: 200px;
+    margin:auto;
+    /* margin-left: -80px; */
+}
 
 .game1:hover .tooltip--text, 
 .game2:hover .tooltip--text,
