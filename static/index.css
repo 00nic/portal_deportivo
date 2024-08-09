@@ -74,10 +74,10 @@ h3{
 /* POSICION DE PARTIDOS */
 .game1{top:40px; left: 60px; z-index: 10}
 .game2{bottom: 40px; left: 60px; z-index: 10 }
-.game4{top:40px; right: 60px;}
-.game5{bottom: 40px; right: 60px;}
+.game4{top:40px; right: 60px; z-index: 9}
+.game5{bottom: 40px; right: 60px; z-index: 9}
 .game3{top: 120px; left: 300px; height: 400px; z-index: 9}
-.game6{top: 120px; right: 300px; height: 400px;}
+.game6{top: 120px; right: 300px; height: 400px; z-index: 9}
 .game7{ top:250px; left:533px; width: 300px}
 
 .circle{
@@ -108,7 +108,7 @@ h3{
 /* VENTANAS CON INFO DEL PARTIDO */
 .conteiner--game .tooltip--text{
     width: 400px;
-    /* height: 400px; DESPUES DE DISEÑAR 1 DARLE ALTURA */
+    /* height: 200px; DESPUES DE DISEÑAR 1 DARLE ALTURA */
     color: #fff;
     position: absolute;
     visibility: hidden;
@@ -119,16 +119,47 @@ h3{
     display: inline-block; cursor: pointer;
     background-color: #000;
 }
+/* ESTILO PARA CARD CON INFO DEL PARTIDO */
+.tooltip--text__card{
+    width: 300px;
+    height: 200px;
+    background-color: #e8eaed;
+    border-radius: 10px;
+}
+/* TAMAÑO DE CIRCULO PARA PONER LA IMAGEN DEL ESCUDO EN LA CARD */
+.circle--card {
+position: absolute;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+overflow: hidden;
+transition: transform 0.3s; 
+box-sizing: border-box;
+background-color: #000;
+/* POSICION DE IMAGEN DENTRO DE LA CARD */
+
+}
+
+.imagen1{
+    top: 40px; left: 40px;
+}
+/* TAMAÑO Y POSICION DE IMAGEN DENTRO DE LA CARD */
+.tooltip--text__card img{
+    width: 100%;
+    height: 100%;
+}
+
+
 
 /* POSICION DE VENTANAS DE CADA PARTIDO */
 .game1 .tooltip--text{
     bottom: 100px;
-    left: 170px;
+    left: 190px;
     margin-left: -80px;
 }
 .game2 .tooltip--text{
     bottom: 100px;
-    left: 170px;
+    left: 190px;
     margin-left: -80px;
 }
 .game3 .tooltip--text{
@@ -139,23 +170,23 @@ h3{
 /* FALTA MODIFICAR */
 .game4 .tooltip--text{
     bottom: 200px;
-    left: 170px;
+    right: 120px;
     margin-left: -80px;
 }
 .game5 .tooltip--text{
     bottom: 200px;
-    left: 170px;
+    right: 120px;
     margin-left: -80px;
 }.game6 .tooltip--text{
     bottom: 200px;
-    left: 170px;
+    right: 120px;
     margin-left: -80px;
 }
 /* FINAL  */
 .game7 .tooltip--text{
     bottom: 200px;
     margin:auto;
-    /* margin-left: -80px; */
+    margin-left: -80px;
 }
 
 .game1:hover .tooltip--text, 
