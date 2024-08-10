@@ -104,50 +104,51 @@ h3{
 .circle6, .circle12{bottom: 12px;}
 .circle13{left: 0;}
 .circle14{ right: 0;}
-
-/* VENTANAS CON INFO DEL PARTIDO */
-.conteiner--game .tooltip--text{
+/* VENTANAS CONO INFO DEL PARTIDO */
+.conteiner--game .tooltip--text {
     width: 400px;
-    /* height: 200px; DESPUES DE DISEÑAR 1 DARLE ALTURA */
-    color: #fff;
+    font-size: 24px;
+    color: #000;
     position: absolute;
-    visibility: hidden;
+    visibility: visible;
     /* posisionamiento */
     z-index: 100;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s, visibility 0s 0.3s;
-    display: inline-block; cursor: pointer;
-    background-color: #000;
+    display: inline-block;
+    cursor: pointer;
 }
 /* ESTILO PARA CARD CON INFO DEL PARTIDO */
-.tooltip--text__card{
+.tooltip--text__card {
     width: 300px;
     height: 200px;
     background-color: #e8eaed;
     border-radius: 10px;
 }
-/* TAMAÑO DE CIRCULO PARA PONER LA IMAGEN DEL ESCUDO EN LA CARD */
+/* ESTILO TITULO DE CARD + POSICION */
+.card--title {
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+.card--block {
+    display: flex; /* Esto alinea los hijos horizontalmente */
+    align-items: center; /* Alinea verticalmente el círculo y el texto */
+    /* justify-content: center;  Alinea horizontalmente en el centro */
+    gap: 10px; /* Espacio entre el círculo y el texto */
+    margin-left: 20px;
+}
 .circle--card {
-position: absolute;
-width: 40px;
-height: 40px;
-border-radius: 50%;
-overflow: hidden;
-transition: transform 0.3s; 
-box-sizing: border-box;
-background-color: #000;
-/* POSICION DE IMAGEN DENTRO DE LA CARD */
-
+    background-color: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+p {
+    font-size: 10px;
+    margin: 0;
 }
 
-.imagen1{
-    top: 40px; left: 40px;
-}
-/* TAMAÑO Y POSICION DE IMAGEN DENTRO DE LA CARD */
-.tooltip--text__card img{
-    width: 100%;
-    height: 100%;
-}
 
 
 
