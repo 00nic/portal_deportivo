@@ -110,10 +110,10 @@ h3{
     font-size: 24px;
     color: #000;
     position: absolute;
-    visibility: visible;
+    visibility: hidden;
     /* posisionamiento */
     z-index: 100;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.3s, visibility 0s 0.3s;
     display: inline-block;
     cursor: pointer;
@@ -163,20 +163,16 @@ p {
 /* POSICION DE VENTANAS DE CADA PARTIDO */
 .game1 .tooltip--text{top: 20px; left: 130px;}
 .game2 .tooltip--text{bottom: 35px; left: 130px;}
-.game3 .tooltip--text{ bottom: 200px; left: 200px; margin-left: -80px;}
-/* FALTA MODIFICAR */
+.game3 .tooltip--text{top: 100px; left: 120px; }
 .game4 .tooltip--text{top: 20px; right: 25px;}
-.game5 .tooltip--text{bottom: 35px; right: 25px;
-}.game6 .tooltip--text{
-    bottom: 200px;
-    right: 120px;
-    margin-left: -80px;
-}
+.game5 .tooltip--text{bottom: 35px; right: 25px;}
+.game6 .tooltip--text{top: 100px; right: 25px;}
+
 /* FINAL  */
 .game7 .tooltip--text{
-    bottom: 200px;
+    bottom: 240px;
+    left: 0px;
     margin:auto;
-    margin-left: -80px;
 }
 
 .game1:hover .tooltip--text, 
