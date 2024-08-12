@@ -1,8 +1,8 @@
 body{
     margin: 0;
     font-family: "Josefin Sans";
-    background-color: #202124;
-    color: #e8eaed;
+    background-color: #e8eaed;
+    color: #202124;
     /* background: radial-gradient(#0077ff, #0d2237dd); */
     /* background: linear-gradient(#f00, #0f0); */
     height: 100vh;
@@ -118,7 +118,6 @@ h3{
     display: inline-block;
     cursor: pointer;
     text-align: center;
-    
 }
 /* ESTILO PARA CARD CON INFO DEL PARTIDO */
 .tooltip--text__card {
@@ -126,39 +125,39 @@ h3{
     height: 200px;
     background-color: #e8eaed;
     border-radius: 20px;
+    box-shadow: 0 0 10px #476ea8;
+
 }
 .card--time{
     display: block;
     margin:0;
     padding-bottom: 0;
     padding: 5px;
+    margin-bottom: 5px;
 }
 /* ESTILO TITULO DE CARD + POSICION */
-.card--title {
-    margin: 0;
-    padding-top: 0;
-}
+    
+.card--title {margin: 0; padding-top: 0; color: #476ea8; }
 .card--block {
-    display: flex; /* Esto alinea los hijos horizontalmente */
+     /* Esto alinea los hijos horizontalmente */
     align-items: center; /* Alinea verticalmente el círculo y el texto */
-    /* justify-content: center;  Alinea horizontalmente en el centro */
+    justify-content: center; 
     gap: 10px; /* Espacio entre el círculo y el texto */
-    margin-left: 20px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.card--block .location{
+    margin: auto;
+    color: #476ea8;
     margin-top: 10px;
 }
-.circle--card {
-    background-color: #000;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-p {
-    font-size: 10px;
-    margin: 0;
-}
 
-
-
+p{font-size: 10px;}
+.pais {font-size: 14px; margin: 10px ;}
+.pais .versus {color: #476ea8; }
+.pais .number{ font-size: 18px;}
 
 /* POSICION DE VENTANAS DE CADA PARTIDO */
 .game1 .tooltip--text{top: 20px; left: 130px;}
@@ -167,13 +166,8 @@ p {
 .game4 .tooltip--text{top: 20px; right: 25px;}
 .game5 .tooltip--text{bottom: 35px; right: 25px;}
 .game6 .tooltip--text{top: 100px; right: 25px;}
-
 /* FINAL  */
-.game7 .tooltip--text{
-    bottom: 240px;
-    left: 0px;
-    margin:auto;
-}
+.game7 .tooltip--text{bottom: 240px; left: 0px; margin:auto;}
 
 .game1:hover .tooltip--text, 
 .game2:hover .tooltip--text,
