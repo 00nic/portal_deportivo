@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="static/css/semis.css"> 
+    <title>Equipos</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/final.css') }}"> 
+    <title>Equipos</title>
+</head>
+<body>
+    <div class="contenedor-header">
+        <header>
+            <h1>CLASIFICACIONES</h1>
+            <nav id="nav">
+                <a href="{{ url_for('cuartos') }}" class="btn">CUARTOS DE FINAL</a>
+                <a href="{{ url_for('semis') }}" class="btn">SEMIFINAL</a>
+                <a href="{{ url_for('final') }}" class="btn">FINAL</a>
+            </nav>
+        </header>
+    </div>  
+    <section id="semis" class="semis">
+    <h2>Semifinales</h2>
+    <button class="accordion">Partido 1: ARGENTINA vs CANADÁ (2-0)</button>
+    <div class="panel">
+        <h3>Formación del Equipo - Titulares </h3>
+        <p><strong>ARGENTINA</strong></p>
+        <p>23 Emiliano Martinez - ARQ</p>
+        <p>13 Cristian Romero - DEF</p>
+        <p>25 Lisandro Martinez - DEF</p>
+        <p>4 Gonzalo Montiel - DEF</p>
+        <p>3 Nicolas Tagliafico - DEF</p>
+        <p>24 Enzo Fernandez - CC</p>
+        <p>11 Angel Di Maria - DEL</p>
+        <p>20 Alexis Mac Allister - CC</p>
+        <p>7 Rodrigo De Paul - CC</p>
+        <p>10 Lionel Messi - DEL</p>
+        <p>9 Julian Alvarez - DEL</p>
+        <p>Entrenador: Lionel Scaloni</p>
+
+        <p><strong>CANADÁ</strong></p>
+        <p>16 Maxime Crépeau - ARQ</p>
+        <p>15 Moïse Lumpungu - DEF</p>
+        <p>19 Alphonso Davies - CC</p>
+        <p>13 Derek Cornelius - DEF</p>
+        <p>2 Alistair Johnston - DEF</p>
+        <p>22 Richmond Laryea - DEF</p>
+        <p>8 Ismaël Koné - CC</p>
+        <p>14 Jacob Shaffelburg - DEL</p>
+        <p>7 Stephen Eustáquio - CC</p>
+        <p>10 Jonathan David - DEL</p>
+        <p>9 Cyle Larin - DEL</p>
+        <p>Entrenador: Jesse Alan Marsch</p>
+
+        <div class="vertical-text-container">
+            <div class="vertical-text">
+                <p><strong>ARGENTINA</strong> vs <strong>CANADÁ</strong></p>
+                <p>11 - Remates totales - 9</p>
+                <p>3 - Remates al arco - 2</p>
+                <p>2 - Asistencias - 0</p>
+                <p>478 - Pases realizados - 458</p>
+                <p>406 - Pases completos - 395</p>
+                <p>15 - Total entradas - 15</p>
+                <p>8 - Entradas con éxito - 12</p>
+                <p>5 - Faltas cometidas - 15</p>
+                <p>1 - Tarjetas Amarillas - 3</p>
+                <p>0 - Tarjetas Rojas - 0</p>
+                <p>5 - Sustituciones - 5</p>
+                <p>0 - Autogol - 0</p>
+            </div>
+        </div>
+    </div>
+    
+    <button class="accordion">Partido 2: URUGUAY vs COLOMBIA (1-0) </button>
+    <div class="panel">
+            <h3>Formación del Equipo - Titulares</h3>
+            <p><strong>URUGUAY</strong></p>
+            <p>1 Sergio Rochet - ARQ</p>
+            <p>2 Jose Gimenez - DEF</p>
+            <p>16 Mathias Olivera - DEF</p>
+            <p>3 Sebastian Caceres - DEF</p>
+            <p>5 Manuel Ugarte - CC</p>
+            <p>15 Federico Valverde - CC</p>
+            <p>7 Diego De La Cruz - CC</p>
+            <p>6 Rodrigo Bentancur - CC</p>
+            <p>19 Darwin Nuñez - DEL</p>
+            <p>11 Facundo Pellistri - DEL</p>
+            <p>20 Maximiliano Araujo - DEF</p>
+            <p>Entrenador: Marcelo Bielsa</p>
+        
+            <p><strong>COLOMBIA</strong></p>
+            <p>12 Camilo Vargas - ARQ</p>
+            <p>2 Carlos Cuesta - DEF</p>
+            <p>21 Daniel Muñoz - LAT</p>
+            <p>23 Davinson Sanchez - DEF</p>
+            <p>17 Johan Mojica - LAT</p>
+            <p>6 Richard Rios - CC</p>
+            <p>7 Luis Diaz - DEL</p>
+            <p>11 Jhon Arias - CC</p>
+            <p>10 James Rodriguez - CC</p>
+            <p>16 Jefferson Lerma - CC</p>
+            <p>24 Jhon Cordoba - DEL</p>
+            <p>Entrenador: Nestor Lorenzo</p>
+
+            <div class="vertical-text-container">
+                <div class="vertical-text">
+                    <p><strong>URUGUAY</strong> vs <strong>COLOMBIA</strong></p>                    
+                    <p>11 - Remates totales - 11</p>
+                    <p>2 - Remates al arco - 4</p>
+                    <p>0 - Asistencias - 1</p>
+                    <p>410 - Pases realizados - 259</p>
+                    <p>343 - Pases completos - 188</p>
+                    <p>29 - Total entradas - 21</p>
+                    <p>16 - Entradas con éxito - 9</p>
+                    <p>11 - Faltas cometidas - 13</p>
+                    <p>3 - Tarjetas Amarillas - 3</p>
+                    <p>1 - Tarjetas Rojas - 1</p>
+                    <p>5 - Sustituciones - 5</p>
+                    <p>0 - Autogol - 0</p>
+                </div>
+            </div>
+    </div>        
+
+
+    </section>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script> 
+</body>
+</html>

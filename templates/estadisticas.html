@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadisticas Copa América 2024</title>
+    <link rel="stylesheet" href="/static/css/estadisticas.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Estadísticas Copa América 2024</h1>
+    </header>
+    <div class="container">
+        {% for equipo in equipos %}
+            <div class="equipo">
+                <div class="equipo-header">
+                    <img src="{{ url_for('static', filename='imagenes/equipos/' +  equipo['foto_url'])}}" alt="Logo de {{ equipo['equipo_nombre'] }}" class="logo-equipo">
+                    <h3>{{ equipo['equipo_nombre'] }}</h3>
+                </div>
+                <div class="info">
+                    <strong>País:</strong> <span class="value">{{ equipo['pais'] }}</span>
+                    <strong>Ciudad:</strong> <span class="value">{{ equipo['ciudad_origen'] }}</span>
+                    <strong>Estadio:</strong> <span class="value">{{ equipo['estadio'] }} (Capacidad: {{ equipo['capacidad_estadio'] }})</span>
+                    <strong>Entrenador Principal:</strong> <span class="value">{{ equipo['entrenador_principal'] }}</span>
+                    <strong>Año de Fundación:</strong> <span class="value">{{ equipo['anio_fundacion'] }}</span>
+                    <strong>Colores del equipo:</strong> <span class="value">{{ equipo['colores'] }}</span>
+                    <strong>Liga en la que participa:</strong> <span class="value">{{ equipo['liga'] }}</span>
+                    <strong>Posición Actual en el Ranking FIFA:</strong> <span class="value">{{ equipo['posicion_ranking'] }}°</span>
+                    <!--<strong>Partidos Jugados en la Copa América:</strong>{{ equipo['partidos_jugados'] }}
+                    <strong>Partidos Ganados en la Copa América:</strong>{{ equipo['partidos_ganados'] }}
+                    <strong>Partidos Perdidos en la Copa América:</strong>{{ equipo['partidos_perdidos'] }}
+                    <strong>Partidos Empatados en la Copa América:</strong>{{ equipo['partidos_empatados'] }}-->
+                    <canvas id="grafico-equipo-{{ equipo['id'] }}" width="400" height="200"></canvas>
+                </div>
+            </div>
+            <div class="jugadores">
+                {% for jugador in jugadores[equipo['pais']] %}
+                    <div class="jugador">
+                        <img src="{{ url_for('static', filename='imagenes/jugadores/' +  jugador['foto_url'])}}" alt="Foto de {{ jugador['nombre_completo'] }}" class="foto-jugador">
+                        <div class="info-jugador">
+                            <!--<h5>{{ jugador['nombre_completo'] }}</h5>-->
+                            <p><strong>Edad:</strong> {{ jugador['edad'] }}</p>
+                            <p><strong>Nacionalidad:</strong> {{ jugador['nacionalidad'] }}</p>
+                            <p><strong>Fecha de Nacimiento:</strong> {{ jugador['fecha_nacimiento'] }}</p>
+                            <!--<p><strong>Posición:</strong> {{ jugador['posicion'] }}</p>
+                            <p><strong>Número de Camiseta:</strong> {{ jugador['numero_camiseta'] }}</p>-->
+                            <p><strong>Equipo Actual:</strong> {{ jugador['equipo_actual'] }}</p>
+                            <p><strong>Partidos Jugados en la Temporada:</strong> {{ jugador['partidos_jugados'] }}</p>
+                            <p><strong>Goles en la Temporada:</strong> {{ jugador['goles_marcados'] }}</p>
+                            <p><strong>Asistencias en la Temporada:</strong> {{ jugador['asistencias'] }}</p>
+                            <p><strong>Tarjetas Amarillas:</strong> {{ jugador['tarjetas_amarillas'] }}</p>
+                            <p><strong>Tarjetas Rojas:</strong> {{ jugador['tarjetas_rojas'] }}</p>
+                            <p><strong>Altura:</strong> {{ jugador['altura'] }}</p>
+                            <p><strong>Peso:</strong> {{ jugador['peso'] }}</p>
+                            <p><strong>Pie Dominante:</strong> {{ jugador['pie_dominante'] }}</p>
+                            <p><strong>Historial de equipos anteriores:</strong> {{ jugador['historial_equipos'] }}</p>
+                            <!--<p><strong>Partidos Totales:</strong> {{ jugador['partidos_totales'] }}</p>
+                            <p><strong>Goles Totales:</strong> {{ jugador['goles_totales'] }}</p>
+                            <p><strong>Asistencias Totales:</strong> {{ jugador['asistencias_totales'] }}</p>-->
+                            <p><strong>Lesiones Recientes:</strong> {{ jugador['lesiones_recientes'] }}</p>
+                            <p><strong>Redes Sociales:</strong> {{ jugador['redes_sociales'] }}</p>
+                            <canvas id="grafico-jugador-{{ jugador['id'] }}" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+    <script type="application/json" id="equiposLabels">{{ equipos_labels | tojson }}</script>
+    <script type="application/json" id="partidosJugadosValues">{{ partidos_jugados_values | tojson }}</script>
+    <script type="application/json" id="partidosGanadosValues">{{ partidos_ganados_values | tojson }}</script>
+    <script type="application/json" id="partidosPerdidosValues">{{ partidos_perdidos_values | tojson }}</script>
+    <script type="application/json" id="partidosEmpatadosValues">{{ partidos_empatados_values | tojson }}</script>
+    <script type="application/json" id="jugadoresLabels">{{ jugadores_labels | tojson }}</script>
+    <script type="application/json" id="golesTotalesValues">{{ goles_totales_values | tojson }}</script>
+    <script type="application/json" id="asistenciasTotalesValues">{{ asistencias_totales_values | tojson }}</script>
+    <script type="application/json" id="partidosTotalesValues">{{ partidos_totales_values | tojson }}</script>
+
+    <script src="{{ url_for('static', filename='js/estadisticas.js') }}"></script>
+</body>
+</html>

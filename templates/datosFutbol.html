@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/final.css') }}"> 
+    <title>Equipos</title>
+</head>
+<body>
+   
+    <div class="contenedor-header">
+        <header>
+            <h1>CLASIFICACIONES</h1>
+            <nav id="nav">
+                <a href="{{ url_for('cuartos') }}" class="btn">CUARTOS DE FINAL</a>
+                <a href="{{ url_for('semis') }}" class="btn">SEMIFINAL</a>
+                <a href="{{ url_for('final') }}" class="btn">FINAL</a>
+           </nav>
+        </header>
+    </div>
+
+</body>
+</html>
