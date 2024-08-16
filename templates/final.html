@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/final.css') }}"> 
+    <title>Equipos</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/final.css') }}"> 
+        <title>Equipos</title>
+    </head>
+    <body>
+        <div class="contenedor-header">
+            <header>
+                <h1>CLASIFICACIONES</h1>
+                <nav id="nav">
+                    <a href="{{ url_for('cuartos') }}" class="btn">CUARTOS DE FINAL</a>
+                    <a href="{{ url_for('semis') }}" class="btn">SEMIFINAL</a>
+                    <a href="{{ url_for('final') }}" class="btn">FINAL</a>
+                </nav>
+            </header>
+        </div>
+    
+    <section id="final" class="final">
+        <h2>Final</h2>
+        <button class="accordion">Partido: ARGENTINA vs COLOMBIA (1-0)</button>
+            <div class="panel"> 
+                <h3>Formación del Equipo - Titulares </h3>
+                <p>ARG - Entrenador: Lionel Scaloni</p>
+                <p>23 Emiliano Martinez - ARQ</p>
+                <p>4 Gonzalo Montiel - DEF</p>
+                <p>25 Lisandro Martinez - DEF</p>
+                <p>13 Cristian Romero - DEF</p>
+                <p>3 Nicolas Tagliafico - DEF</p>
+                <p>11 Angel Di Maria - DEF</p>
+                <p>24 Enzo Fernandez - CC</p>
+                <p>7 Rodrigo De Paul - CC</p>
+                <p>20 Alexis Mac Allister - CC</p>
+                <p>9 Julian Alvarez - DEL</p>
+                <p>10 Lionel Messi - DEL</p>
+                
+                <p>COL - Entrenador: Nestor Lorenzo</p>
+                <p>12 Camilo Vargas - ARQ</p>
+                <p>4 Johan Mojica - LAT</p>
+                <p>23 Davinson Sanchez - DEF</p>
+                <p>2 Carlos Cuesta - DEF</p>
+                <p>4 Santiago Arias - CC</p>
+                <p>11 Jhon Arias - CC</p>
+                <p>16 Jefferson Lerma - CC</p>
+                <p>6 Richard Rios - CC</p>
+                <p>7 Luis Diaz - DEL</p>
+                <p>9 Jhon Cordoba - DEL</p>
+                <p>10 James Rodriguez - CC</p
+            
+            <div class="vertical-text-container">
+                <div class="vertical-text">
+                    <h3>Estadísticas</h3>
+                    <p><strong>ARGENTINA</strong> vs <strong>COLOMBIA</strong></p>                    
+                    <p>6 - Remates al arco - 1</p>
+                    <p>2 - Asistencias - 0</p>
+                    <p>627 - Pases Realizados - 209</p>
+                    <p>561 - Pases completos - 150</p>
+                    <p>17 - Total entradas - 19</p>
+                    <p>12 - Entradas con éxito - 19</p>
+                    <p>11 - Faltas cometidas - 19</p>
+                    <p>2 - Tarjetas amarillas - 2</p>
+                    <p>0 - Tarjetas Rojas - 0</p>
+                    <p>6 - Sustituciones - 6</p>
+                    <p>0 - Autogol - 0</p>
+                </div>
+            </div>  
+        </div>
+               
+    </section>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
