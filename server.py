@@ -7,13 +7,14 @@ import bcrypt
 app = Flask(__name__)
 load_dotenv()
 
+app.config['MYSQL_DB'] = os.getenv('MYSQL_DB')
+app.config['MYSQL_HOST'] = os.getenv('MYSQL_HOST')
 app.config['MYSQL_USER'] = os.getenv('MYSQL_USER')
 app.config['MYSQL_PASSWORD'] = os.getenv('MYSQL_PASSWORD')
-app.config['MYSQL_HOST'] = os.getenv('MYSQL_HOST')
-app.config['MYSQL_DB'] = os.getenv('MYSQL_DB')
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+app.config['SECRET_KEY'] = '4848'
 
 mysql = MySQL(app)
-app.secret_key = os.getenv('SECRET_KEY') 
 
 @app.route('/')
 def main():
@@ -69,6 +70,48 @@ def logout():
     session.pop('correo', None)
     flash('Has cerrado sesión.', 'info')
     return redirect(url_for('login'))
+
+
+@app.route('/estadisticas')
+def estadisticas():
+    cur = mysql.connection.cursor()
+    cur.execute('SELECT * FROM equipos')
+    equipos = cur.fetchall()
+    jugadores = {}
+    for equipo in equipos:
+        seleccion = equipo['pais']
+        cur.execute('SELECT * FROM jugadores WHERE seleccion = %s', (seleccion,))
+        jugadores[seleccion] = cur.fetchall()
+    
+    equipos_labels = [equipo['equipo_nombre'] for equipo in equipos]
+    partidos_jugados_values = [equipo['partidos_jugados'] for equipo in equipos]
+    partidos_ganados_values = [equipo['partidos_ganados'] for equipo in equipos]
+    partidos_perdidos_values = [equipo['partidos_perdidos'] for equipo in equipos]
+    partidos_empatados_values = [equipo['partidos_empatados'] for equipo in equipos]
+
+    jugadores_labels = []
+    goles_totales_values = []
+    asistencias_totales_values = []
+    partidos_totales_values = []
+
+    for equipo, jugadores_list in jugadores.items():
+        for jugador in jugadores_list:
+            jugadores_labels.append(jugador['nombre_completo'])
+            goles_totales_values.append(jugador['goles_totales'])
+            asistencias_totales_values.append(jugador['asistencias_totales'])
+            partidos_totales_values.append(jugador['partidos_totales'])
+
+    cur.close()
+
+    return render_template('estadisticas.html', equipos=equipos, jugadores=jugadores, equipos_labels=equipos_labels,
+                           partidos_jugados_values=partidos_jugados_values,
+                           partidos_ganados_values=partidos_ganados_values,
+                           partidos_perdidos_values=partidos_perdidos_values,
+                           partidos_empatados_values=partidos_empatados_values,
+                           jugadores_labels=jugadores_labels,
+                           goles_totales_values=goles_totales_values,
+                           asistencias_totales_values=asistencias_totales_values,
+                           partidos_totales_values=partidos_totales_values)
 
 
 if __name__ == '__main__':
