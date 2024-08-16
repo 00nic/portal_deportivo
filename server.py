@@ -69,6 +69,10 @@ def login():
 def noti():
     return render_template("portal.html")
 
+@app.route("/noti1")
+def notic():
+    return render_template("noti1.html")
+
 
 @app.route('/logout')
 def logout():
