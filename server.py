@@ -58,12 +58,17 @@ def login():
         if result and bcrypt.checkpw(clave.encode('utf-8'), result[0].encode('utf-8')):
             session['correo'] = correo
             flash('Inicio de sesión exitoso.', 'success')
-            return redirect(url_for('display'))
+            return redirect(url_for('noti'))
         else:
             flash('Correo o contraseña incorrectos.', 'danger')
             return redirect(url_for('login'))
 
     return render_template('login.html')
+
+@app.route("/portal")
+def noti():
+    return render_template("portal.html")
+
 
 @app.route('/logout')
 def logout():
