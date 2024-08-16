@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cuartos.css') }}">
+    <title>Equipos</title>
+</head>
+<body>
+    <div class="contenedor-header">
+        <header>
+            <h1>CLASIFICACIONES</h1>
+            <nav id="nav">
+                <a href="{{ url_for('cuartos') }}" class="btn">CUARTOS DE FINAL</a>
+                <a href="{{ url_for('semis') }}" class="btn">SEMIFINAL</a>
+                <a href="{{ url_for('final') }}" class="btn">FINAL</a>
+            </nav>
+        </header>
+    </div>
+    <section id="Cuartos" class="Cuartos">
+        <h2>Cuartos de Final</h2>
+
+        <button class="accordion">Partido 1: ARGENTINA vs ECUADOR (0-0)</button>
+        <div class="panel">
+            <h3>Formación del Equipo - Titulares</h3>
+            <p><strong>ARGENTINA</strong></p>
+            <p>23 Emiliano Martinez - ARQ</p>
+            <p>25 Lisandro Martinez - DEF</p>
+            <p>13 Cristian Romero - DEF</p>
+            <p>3 Nicolas Tagliafico - DEF</p>
+            <p>26 Nahuel Molina - LAT</p>
+            <p>7 Rodrigo De Paul - CC</p>
+            <p>15 Nicolas Gonzalez - DEL</p>
+            <p>24 Enzo Fernandez - CC</p>
+            <p>20 Alexis Mac - CC</p>
+            <p>22 Lautaro Martinez - DEL</p>
+            <p>10 Lionel Messi - DEL</p>
+            <p>Entrenador: Lionel Scaloni</p>
+
+            <p><strong>ECUADOR</strong></p>
+            <p>22 Alexander Dominguez - ARQ</p>
+            <p>2 Felix Torres - DEF</p>
+            <p>3 Piero Hincapie - DEF</p>
+            <p>17 Angelo Preciado - CC</p>
+            <p>6 Willian Pacho - DEF</p>
+            <p>8 Carlos Gruezo - CC</p>
+            <p>16 Jeremy Sarmiento - DEL</p>
+            <p>23 Moises Caicedo - CC</p>
+            <p>10 Ray Paez - CC</p>
+            <p>21 Alan Franco - CC</p>
+            <p>13 Enner Valencia - DEL</p>
+            <p>Entrenador: Felix Sanchez</p>
+
+            <div class="vertical-text-container">
+                <div class="vertical-text">
+                    <h3>Estadísticas</h3>
+                    <p><strong>ARGENTINA</strong> vs <strong>ECUADOR</strong></p>
+                    <p>8 - Remates totales - 9</p>
+                    <p>2 - Remates al arco - 2</p>
+                    <p>1 - Asistencias - 1</p>
+                    <p>374 - Pases realizados - 355</p>
+                    <p>310 - Pases completos - 289</p>
+                    <p>22 - Total entradas - 20</p>
+                    <p>15 - Entradas con éxito - 12</p>
+                    <p>13 - Faltas cometidas - 14</p>
+                    <p>2 - Tarjetas Amarillas - 2</p>
+                    <p>0 - Tarjetas Rojas - 0</p>
+                    <p>4 - Sustituciones - 5</p>
+                    <p>0 - Autogol - 0</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="accordion">Partido 2: VENEZUELA vs CANADÁ (1-1)</button>
+        <div class="panel">
+            <h3>Formación del Equipo - Titulares</h3>
+            <p><strong>VENEZUELA</strong></p>
+            <p>22 Rafael Romo - ARQ</p>
+            <p>3 Yordan Osorio - DEF</p>
+            <p>2 Nahuel Ferraresi - DEF</p>
+            <p>4 Jon Aramburu - LAT</p>
+            <p>15 Miguel Navarro - DEF</p>
+            <p>13 Jose Martinez - CC</p>
+            <p>10 Yeferson Soteldo - CC</p>
+            <p>6 Yangel Herrera - CC</p>
+            <p>18 Cristian Casseres - CC</p>
+            <p>25 Eduard Bello - DEL</p>
+            <p>23 Jose Rondon - DEL</p>
+            <p>Entrenador: Fernando Batista</p>
+
+            <p><strong>CANADÁ</strong></p>
+            <p>16 Maxime Crépeau - ARQ</p>
+            <p>19 Alphonso Davies - CC</p>
+            <p>15 Moïse Lumpungu - DEF</p>
+            <p>13 Derek Cornelius - DEF</p>
+            <p>2 Alistair Johnston - DEF</p>
+            <p>22 Richmond Laryea - DEF</p>
+            <p>14 Jacob Shaffelburg - DEL</p>
+            <p>21 Jonathan Osorio - CC</p>
+            <p>10 Jonathan David - DEL</p>
+            <p>7 Stephen Eustáquio - CC</p>
+            <p>9 Cyle Larin - DEL</p>
+            <p>Entrenador: Jesse Alan Marsch</p>
+
+            <div class="vertical-text-container">
+                <div class="vertical-text">
+                    <h3>Estadísticas</h3>
+                    <p><strong>VENEZUELA</strong> vs <strong>CANADÁ</strong></p>
+                    <p>1 - Asistencias - 0</p>
+                    <p>412 - Pases realizados - 329</p>
+                    <p>306 - Pases completos - 247</p>
+                    <p>31 - Total entradas - 31</p>
+                    <p>21 - Entradas con éxito - 22</p>
+                    <p>7 - Faltas cometidas - 13</p>
+                    <p>1 - Tarjetas Amarillas - 2</p>
+                    <p>0 - Tarjetas Rojas - 0</p>
+                    <p>5 - Sustituciones - 4</p>
+                    <p>0 - Autogol - 0</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="accordion">Partido 3: PARAGUAY vs BRASIL (0-0)</button>
+        <div class="panel">
+            <h3>Formación del Equipo - Titulares</h3>
+            <p><strong>PARAGUAY</strong></p>
+            <p>22 Rodrigo Morinigo - ARQ</p>
+            <p>3 Omar Alderete - DEF</p>
+            <p>25 Victor Velazquez - DEF</p>
+            <p>5 Fabian Balbuena - DEF</p>
+            <p>4 Matias Espinoza - CC</p>
+            <p>8 Damian Bobadilla - CC</p>
+            <p>19 Julio Enciso - DEL</p>
+            <p>10 Miguel Almiron - CC</p>
+            <p>14 Adrian Cubas - CC</p>
+            <p>23 Mathias Villasanti - CC</p>
+            <p>18 Alex Arce - DEL</p>
+            <p>Entrenador: Daniel Garnero</p>
+
+            <p><strong>BRASIL</strong></p>
+            <p>1 Alisson Becker - ARQ</p>
+            <p>4 Marcos Aoas - DEF</p>
+            <p>6 Wendell Nascimento - DEF</p>
+            <p>2 Danilo Luiz Da Silva - DEF</p>
+            <p>3 Eder Militao - DEF</p>
+            <p>7 Vinicius Paixao - DEL</p>
+            <p>5 Bruno Guimaraes Rodriguez - CC</p>
+            <p>15 João Victor Gomes - CC</p>
+            <p>8 Lucas Tolentino Coelho - CC</p>
+            <p>20 Savio Moreira - DEL</p>
+            <p>10 Rodrygo Silva - DEL</p>
+            <p>Entrenador: Dorival Silvestre</p>
+
+            <div class="vertical-text-container">
+                <div class="vertical-text">
+                    <h3>Estadísticas</h3>
+                    <p><strong>PARAGUAY</strong> vs <strong>BRASIL</strong></p>
+                    <p>15 - Remates totales - 17</p>
+                    <p>6 - Remates al arco - 6</p>
+                    <p>0 - Asistencias - 2</p>
+                    <p>316 - Pases realizados - 357</p>
+                    <p>265 - Pases completos - 302</p>
+                    <p>20 - Total entradas - 23</p>
+                    <p>14 - Entradas con éxito - 18</p>
+                    <p>12 - Faltas cometidas - 14</p>
+                    <p>1 - Tarjetas Amarillas - 1</p>
+                    <p>0 - Tarjetas Rojas - 0</p>
+                    <p>2 - Sustituciones - 3</p>
+                    <p>0 - Autogol - 0</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="accordion">Partido 4: URUGUAY vs COLOMBIA (2-2)</button>
+        <div class="panel">
+            <h3>Formación del Equipo - Titulares</h3>
+            <p><strong>URUGUAY</strong></p>
+            <p>1 Sergio Rochet - ARQ</p>
+            <p>2 Jose Maria Gimenez - DEF</p>
+            <p>3 Diego Godin - DEF</p>
+            <p>4 Mathias Olivera - DEF</p>
+            <p>5 Rodrigo Bentancur - CC</p>
+            <p>6 Manuel Ugarte - CC</p>
+            <p>7 Nicolas De La Cruz - DEL</p>
+            <p>8 Federico Valverde - CC</p>
+            <p>9 Darwin Nunez - DEL</p>
+            <p>10 Luis Suarez - DEL</p>
+            <p>11 Edinson Cavani - DEL</p>
+            <p>Entrenador: Diego Alonso</p>
+
+            <p><strong>COLOMBIA</strong></p>
+            <p>12 David Ospina - ARQ</p>
+            <p>2 Daniel Munoz - DEF</p>
+            <p>3 Yerry Mina - DEF</p>
+            <p>4 Davinson Sanchez - DEF</p>
+            <p>5 Johan Mojica - DEF</p>
+            <p>6 Wilmar Barrios - CC</p>
+            <p>7 Juan Cuadrado - DEL</p>
+            <p>8 Gustavo Cuellar - CC</p>
+            <p>9 Luis Diaz - DEL</p>
+            <p>10 James Rodriguez - CC</p>
+            <p>11 Rafael Santos Borre - DEL</p>
+            <p>Entrenador: Nestor Lorenzo</p>
+
+            <div class="vertical-text-container">
+                <div class="vertical-text">
+                    <h3>Estadísticas</h3>
+                    <p><strong>URUGUAY</strong> vs <strong>COLOMBIA</strong></p>
+                    <p>9 - Remates totales - 11</p>
+                    <p>5 - Remates al arco - 7</p>
+                    <p>1 - Asistencias - 1</p>
+                    <p>356 - Pases realizados - 329</p>
+                    <p>295 - Pases completos - 278</p>
+                    <p>18 - Total entradas - 22</p>
+                    <p>12 - Entradas con éxito - 16</p>
+                    <p>8 - Faltas cometidas - 10</p>
+                    <p>1 - Tarjetas Amarillas - 1</p>
+                    <p>0 - Tarjetas Rojas - 0</p>
+                    <p>4 - Sustituciones - 3</p>
+                    <p>0 - Autogol - 0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
 
