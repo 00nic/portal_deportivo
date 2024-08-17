@@ -69,7 +69,7 @@ nav#nav .btn:hover {
     padding-right: 0; 
     max-width: 100%; 
     margin: 0; 
-    background-image: url('../imagenes/fondo.jpg'); 
+    background-color:#e9edff;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 

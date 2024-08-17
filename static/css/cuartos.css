@@ -25,6 +25,7 @@ body {
     background-color: var(--primary-color);
     color: var(--text-light-color); 
     z-index: 1000; 
+    margin-bottom: 60px;
 }
 
 header {
@@ -69,7 +70,7 @@ nav#nav .btn:hover {
     padding-right: 0; 
     max-width: 100%; 
     margin: 0; 
-    background-image: url('../imagenes/fondo.jpg'); 
+    background-color: #e9edff;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -89,6 +90,7 @@ nav#nav .btn:hover {
     font-size: 15px;
     transition: background-color 0.3s;
     margin-bottom: 10px;
+    margin-top: 80px;
 }
 
 .accordion.active {
