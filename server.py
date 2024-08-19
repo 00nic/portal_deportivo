@@ -20,6 +20,12 @@ mysql = MySQL(app)
 def main():
     return redirect(url_for('login'))
 
+@app.route('/vista_partidos')
+def vista_partidos():
+    return render_template("index.html")
+
+
+
 @app.route('/registro', methods=['GET', 'POST'])
 def registro():
     if request.method == 'POST':
@@ -55,7 +61,7 @@ def login():
         result = cur.fetchone()
         cur.close()
 
-        if result and bcrypt.checkpw(clave.encode('utf-8'), result[0].encode('utf-8')):
+        if result and bcrypt.checkpw(clave.encode('utf-8'), result['contraseña'].encode('utf-8')):
             session['correo'] = correo
             flash('Inicio de sesión exitoso.', 'success')
             return redirect(url_for('noti'))
@@ -113,14 +119,27 @@ def estadisticas():
     cur.close()
 
     return render_template('estadisticas.html', equipos=equipos, jugadores=jugadores, equipos_labels=equipos_labels,
-                           partidos_jugados_values=partidos_jugados_values,
-                           partidos_ganados_values=partidos_ganados_values,
-                           partidos_perdidos_values=partidos_perdidos_values,
-                           partidos_empatados_values=partidos_empatados_values,
-                           jugadores_labels=jugadores_labels,
-                           goles_totales_values=goles_totales_values,
-                           asistencias_totales_values=asistencias_totales_values,
-                           partidos_totales_values=partidos_totales_values)
+                        partidos_jugados_values=partidos_jugados_values,
+                        partidos_ganados_values=partidos_ganados_values,
+                        partidos_perdidos_values=partidos_perdidos_values,
+                        partidos_empatados_values=partidos_empatados_values,
+                        jugadores_labels=jugadores_labels,
+                        goles_totales_values=goles_totales_values,
+                        asistencias_totales_values=asistencias_totales_values,
+                        partidos_totales_values=partidos_totales_values)
+
+
+@app.route('/cuartos')
+def cuartos():
+    return render_template('cuartoss.html')
+
+@app.route('/semis')
+def semis():
+    return render_template('semis.html')
+
+@app.route('/final')
+def final():
+    return render_template('final.html')
 
 
 if __name__ == '__main__':

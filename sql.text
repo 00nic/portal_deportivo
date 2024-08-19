@@ -1,0 +1,118 @@
+CREATE TABLE jugadores ( 
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    nombre_completo VARCHAR(50) NOT NULL, 
+    edad INT NOT NULL, 
+    nacionalidad VARCHAR(50) NOT NULL, 
+    posicion VARCHAR(50) NOT NULL, 
+    numero_camiseta INT NOT NULL, 
+    equipo_actual VARCHAR(50) NOT NULL, 
+    partidos_jugados INT NOT NULL, 
+    goles_marcados INT NOT NULL, 
+    asistencias INT NOT NULL, 
+    tarjetas_amarillas INT NOT NULL, 
+    tarjetas_rojas INT NOT NULL, 
+    altura VARCHAR(10) NOT NULL, 
+    peso VARCHAR(10) NOT NULL, 
+    pie_dominante VARCHAR(10), 
+    fecha_nacimiento DATE NOT NULL, 
+    historial_equipos VARCHAR(80) NOT NULL, 
+    partidos_totales INT NOT NULL, 
+    goles_totales INT NOT NULL, 
+    asistencias_totales INT NOT NULL, 
+    lesiones_recientes VARCHAR(50) NOT NULL, 
+    redes_sociales VARCHAR(50) NOT NULL, 
+    foto_url VARCHAR(50) NOT NULL, 
+    seleccion VARCHAR(50) NOT NULL 
+); 
+
+CREATE TABLE equipos ( 
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    equipo_nombre VARCHAR(50) NOT NULL, 
+    pais VARCHAR(50) NOT NULL, 
+    ciudad_origen VARCHAR(50) NOT NULL, 
+    estadio VARCHAR(50) NOT NULL, 
+    capacidad_estadio FLOAT NOT NULL, 
+    entrenador_principal VARCHAR(50) NOT NULL, 
+    anio_fundacion INT(4) NOT NULL, 
+    colores VARCHAR(50) NOT NULL, 
+    liga VARCHAR(255) NOT NULL, 
+    posicion_ranking INT NOT NULL, 
+    partidos_jugados INT NOT NULL, 
+    partidos_ganados INT NOT NULL, 
+    partidos_perdidos INT NOT NULL, 
+    partidos_empatados INT NOT NULL, 
+    foto_url VARCHAR(50) NOT NULL 
+); 
+----arg----
+INSERT INTO equipos (
+    equipo_nombre, pais, ciudad_origen, estadio, capacidad_estadio, entrenador_principal, 
+    anio_fundacion, colores, liga, posicion_ranking, partidos_jugados, partidos_ganados, 
+    partidos_perdidos, partidos_empatados, foto_url
+) VALUES (
+    'Selección de fútbol de Argentina', 'Argentina', 'Buenos Aires', 'Monumental', 
+    84.517, 'Lionel Scaloni', 1893, 'Celeste y blanco', 
+    'Competiciones internacionales(Copa Mundial de la FIFA, Copa América, Juegos Olímpicos, Copa de Campeones Conmebol-UEFA)', 
+    1, 6, 5, 0, 1, 'argentina.png'
+);
+
+INSERT INTO jugadores (
+    nombre_completo, edad, nacionalidad, posicion, numero_camiseta, equipo_actual, 
+    partidos_jugados, goles_marcados, asistencias, tarjetas_amarillas, tarjetas_rojas, 
+    altura, peso, pie_dominante, fecha_nacimiento, historial_equipos, partidos_totales, 
+    goles_totales, asistencias_totales, lesiones_recientes, redes_sociales, foto_url, seleccion
+) VALUES (
+    'Julian Alvarez', 24, 'Argentina', 'Delantero', 9, 'Atlético de Madrid', 
+    64, 19, 13, 5, 0, 
+    '1.70m', '68kg', 'Derecho', '2000-01-31', 'River Plate, Manchester City', 
+    259, 98, 48, 'Sin lesiones recientes reportadas', '@juliaanalvarez', 'julian_alvarez.png', 'Argentina'
+);
+
+INSERT INTO jugadores (
+    nombre_completo, edad, nacionalidad, posicion, numero_camiseta, equipo_actual, 
+    partidos_jugados, goles_marcados, asistencias, tarjetas_amarillas, tarjetas_rojas, 
+    altura, peso, pie_dominante, fecha_nacimiento, historial_equipos, partidos_totales, 
+    goles_totales, asistencias_totales, lesiones_recientes, redes_sociales, foto_url, seleccion
+) VALUES (
+    'Lautaro Martinez', 26, 'Argentina', 'Delantero', 22, 'Inter de Milán', 
+    54, 35, 4, 8, 0, 
+    '1.79m', '72kg', 'Derecho', '1997-08-22', 'Racing Club', 
+    384, 176, 39, 'Sin lesiones recientes reportadas', '@lautaromartinez', 'lautaro_martinez.png', 'Argentina'
+);
+----colombia---
+
+INSERT INTO equipos (
+    equipo_nombre, pais, ciudad_origen, estadio, capacidad_estadio, 
+    entrenador_principal, anio_fundacion, colores, liga, 
+    posicion_ranking, partidos_jugados, partidos_ganados, partidos_perdidos, partidos_empatados, foto_url
+) VALUES (
+    'Selección de Fúbol de Colombia', 'Colombia', 'Barranquilla', 'Metropolitano', 49000, 
+    'Néstor Lorenzo', 1924, 'Amarillo, azul y rojo', 'Copa Mundial de Fútbol, Copa América, Copa FIFA
+    Confederaciones, Juegos Centroamericanos y del Caribe, Juegos Bolivarianos', 
+    9, 6, 4, 1, 1, 'colombia.png'
+);
+
+
+INSERT INTO jugadores (
+    nombre_completo, edad, nacionalidad, posicion, numero_camiseta, equipo_actual, 
+    partidos_jugados, goles_marcados, asistencias, tarjetas_amarillas, tarjetas_rojas, 
+    altura, peso, pie_dominante, fecha_nacimiento, historial_equipos, partidos_totales, 
+    goles_totales, asistencias_totales, lesiones_recientes, redes_sociales, foto_url, seleccion
+) VALUES (
+    'James Rodriguez', 33, 'Colombia', 'Centro campista', 10, 'Sao Paulo FC', 
+    18, 2, 7, 2, 0, 
+    '1.81m', '78kg', 'Izquierdo', '1991-07-12', 'Envigado F. C., C. A. Banfield, F. C. Porto, A. S. Monaco, Real Madrid C. F., F.C. Bayern Munich, Everton F. C., Al Rayyan S. C., Olympiakos F. C.', 
+    438, 119, 107, 'Sin lesiones recientes reportadas', '@jamesrodriguez10', 'james_rodriguez.png', 'Colombia'
+);
+
+
+INSERT INTO jugadores (
+    nombre_completo, edad, nacionalidad, posicion, numero_camiseta, equipo_actual, 
+    partidos_jugados, goles_marcados, asistencias, tarjetas_amarillas, tarjetas_rojas, 
+    altura, peso, pie_dominante, fecha_nacimiento, historial_equipos, partidos_totales, 
+    goles_totales, asistencias_totales, lesiones_recientes, redes_sociales, foto_url, seleccion
+) VALUES (
+    'Jhon Durán', 20, 'Colombia', 'Delantero', 14, 'Aston Villa FC', 
+    39, 8, 0, 8, 0, 
+    '1.85m', '73kg', 'Izquierdo', '2002-12-13', 'Envigado F. C., Chicago Fire F. C.', 
+    128, 26, 82, 'Tendón de la corva', '@jaderduran9', 'jhon_duran.png', 'Colombia'
+);
