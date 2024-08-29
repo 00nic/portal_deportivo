@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <link rel="stylesheet" href="/static/css/cuartos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
     <title>Equipos</title>
 </head>
 <body>
     <div class="contenedor-header">
         <header>
-            <h1>CLASIFICACIONES</h1>
+            <a href="/portal" class="btn-portada">Volver a la Portada</a>
+            <h1>Clasificaciones</h1>
+        </header>
             <nav id="nav">
                 <a href="{{ url_for('cuartos') }}" class="btn">CUARTOS DE FINAL</a>
                 <a href="{{ url_for('semis') }}" class="btn">SEMIFINAL</a>
                 <a href="{{ url_for('final') }}" class="btn">FINAL</a>
             </nav>
-        </header>
+        
     </div>
     <section id="Cuartos" class="Cuartos">
         <h2>Cuartos de Final</h2>

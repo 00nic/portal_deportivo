@@ -60,6 +60,7 @@ def login():
         cur.execute("SELECT contraseña FROM users WHERE correo = %s", (correo,))
         result = cur.fetchone()
         cur.close()
+        print(result)
 
         if result and bcrypt.checkpw(clave.encode('utf-8'), result['contraseña'].encode('utf-8')):
             session['correo'] = correo

@@ -1,25 +1,31 @@
 :root {
     --primary-color: #e9edff;
-    --secondary-color: #00027ae7;
-    --button-bg-color: #3d6fa3;
-    --button-hover-bg-color: #0056b3;
-    --input-bg-color: #fff;
+    --secondary-color:rgba(40, 108, 185, 0.879);
+    --button-bg-color: #1d66b4;
+    --button-hover-bg-color: #4a97e9;
+    --input-bg-color: #020202;
     --input-border-color: #ddd;
     --input-focus-border-color: #0056b3;
-    --background-color: #00027a;
+    --background-color:rgba(0, 119, 255, 0.879);
+    
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Josefin Sans";
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    color: var(--primary-color);
+    background-color: rgba(7, 2, 53, 0.879);
+    background-image: url(../imagenes/fondo.jpeg) ;
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el fondo */
+    color: black;
     text-align: center;
+    
 }
 
 h1 {
-    color: var(--primary-color);
+    color: black;
     margin-top: 20px;
 }
 
@@ -30,7 +36,8 @@ form {
     margin: 20px auto;
     padding: 20px;
     max-width: 400px;
-    background: var(#00027ae7);
+    background: rgba(0, 119, 255, 0.879);
+
     border-radius: 8px;
     box-shadow: 0 0 10px rgb(0, 0, 0);
 }
@@ -56,7 +63,7 @@ input:focus {
 
 button {
     background-color: var(--button-bg-color);
-    color: #fff;
+    color: black;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -72,7 +79,7 @@ button:hover {
 a {
     display: block;
     margin-top: 20px;
-    color: var(--primary-color);
+    color: black;
     text-decoration: none;
 }
 

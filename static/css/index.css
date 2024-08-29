@@ -2,7 +2,7 @@ body{
     margin: 0;
     font-family: "Josefin Sans";
     background-color: #e8eaed;
-    color: hsl(225, 6%, 13%);
+    color: hwb(225 12% 86%);
 
     background-image: repeating-linear-gradient(
       45deg,             /* Ángulo del gradiente */
@@ -28,6 +28,21 @@ body{
     margin: 0;
     padding: 10px;
     margin-bottom: 20px;
+}
+
+.btn-portada {
+    position: absolute;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--secondary-color); /* Color de fondo del botón */
+    color: var(--text-light-color); /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s;
+}
+
+.btn-portada:hover {
+    background-color: var(--accent-color); /* Color de fondo al pasar el mouse */
 }
 .team-list{
     display: flex;
